@@ -1,15 +1,14 @@
-import { Inter } from '@next/font/google'
-import Navbar from '@/components/Navbar'
-
-const inter = Inter({ subsets: ['latin'] })
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <Navbar />
-        <h1>oi</h1>
+    <div>
+      <Navbar></Navbar>
+      <div className="h-screen">
+        <h1 className="text-3xl font-bold text-center">Hello world!</h1>
       </div>
-    </main>
-  )
+      <Footer></Footer>
+    </div>
+  );
 }
