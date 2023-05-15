@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <header className="pb-16">
-      <nav className="bg-yellow-900 text-black  top-0 w-full shadow-xl transition-all">
+    <header>
+      <nav className="h-14 bg-gradient-to-r from-sky-500 to-indigo-500 text-white top-0 w-full shadow-xl transition-all">
         <div className="max-w-7xl mx-auto pl-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-16">
             <div className="flex items-center">
@@ -12,14 +12,20 @@ export default function Navbar() {
               </h1>
             </div>
             <div className="ml-auto flex items-center space-x-4">
-              <Link href="/" className="hover:text-slate-100 px-3 py-2 rounded-md text-sm font-medium" passHref>
-                Início
+              <Link href="/" passHref legacyBehavior>
+                <a className="hover:text-slate-100 px-3 py-2 rounded-md text-sm font-medium">
+                  Início
+                </a>
               </Link>
-              <Link href="/Sobre" className="hover:text-slate-100 px-3 py-2 rounded-md text-sm font-medium"  passHref>
-                Sobre
+              <Link href="/Sobre" passHref legacyBehavior>
+                <a className="hover:text-slate-100 px-3 py-2 rounded-md text-sm font-medium">
+                  Sobre
+                </a>
               </Link>
-              <Link href="/Contato" className="hover:text-slate-100 px-3 py-2 rounded-md text-sm font-medium"  passHref>
-                Contato
+              <Link href="/Contato" passHref legacyBehavior>
+                <a className="hover:text-slate-100 px-3 py-2 rounded-md text-sm font-medium">
+                  Contato
+                </a>
               </Link>
             </div>
           </div>
@@ -27,4 +33,6 @@ export default function Navbar() {
       </nav>
     </header>
   );
-}
+};
+
+export default Navbar;
