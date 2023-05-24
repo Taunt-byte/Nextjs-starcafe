@@ -1,14 +1,14 @@
-import Link from "next/link";
+import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 
-export default function Home() {
+const Sobre = () => {
   return (
     <div>
-      <Navbar></Navbar>
-      <div className="bg-gray-100 min-h-screen">
+      <Navbar />
 
+      <div className="bg-gray-100 min-h-screen">
         <main className="container mx-auto px-4 py-8">
           <h2 className="text-2xl font-semibold mb-4">Sobre nós</h2>
           <p className="mb-4">
@@ -25,8 +25,11 @@ export default function Home() {
           </p>
         </main>
       </div>
-      <Newsletter></Newsletter>
-      <Footer></Footer>
+
+      <Newsletter />
+      <Footer />
     </div>
   );
-}
+};
+
+export default Sobre;
